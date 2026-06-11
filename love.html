@@ -1,0 +1,65 @@
+<!DOCTYPE html><html>
+    <head>
+        <title>
+ FOR MOM
+        </title>
+        <style>
+            body {
+                margin: 0;
+                overflow: hidden;
+                
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                height: 100vh;
+
+                background-color: pink;
+
+                animation: fadeIn 2s;
+            }
+            h1 {
+                font-size: 60px;
+                text-align: center;
+                z-index: 1000;
+                 text-shadow: 0 0 20px white;
+
+            }
+            @keyframes fadeIn {
+                from{
+                    opacity: 0;
+                } to {
+                    opacity: 1;
+
+                }
+            }
+        
+        </style>
+    </head>
+    <body>
+        <h1> I LOVE YOU MOM</h1>
+        <script>
+            function createHeart () {
+                let heart = document.createElement("div");
+
+                heart.innerHTML = "❤️";
+
+                heart.style.position = "absolute";
+
+                heart.style.left = Math.random() *window.innerWidth + "px";
+                heart.style.top = Math.random() *window.innerHeight + "px";
+
+                heart.style.fontSize = (20 + Math.random() * 40) + "px";
+
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 1000);
+                
+           }
+           setInterval(createHeart, 50);
+        </script>
+    </body>
+</html>
